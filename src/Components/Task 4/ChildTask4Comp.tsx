@@ -13,12 +13,12 @@ type ChildTask4Props = {
 function ChildTask4Comp(props: ChildTask4Props) {
   return (
     <div>
-      {props.data.map((val) => (
-        <div>
+      {props.data.map((val, index) => (
+        <div key={index}>
           <h2>ID :{val.id}</h2>
           <p>
-            {val.images.map((val1) => (
-              <img src={val1} alt="img" />
+            {val.images.map((val1, index) => (
+              <img key={index} src={val1} alt="img" />
             ))}
           </p>
           <h3 style={{ color: "blue" }}>Price : ₹ {val.price}</h3>
